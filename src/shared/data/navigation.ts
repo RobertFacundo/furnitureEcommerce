@@ -6,7 +6,7 @@ export const navLinks = [
 ];
 
 export const helpLinks = [
-  { name: 'Payment Options', path: '' },
-  { name: 'Returns', path: '' },
-  { name: 'Privacy Policies', path: '' }
+  { name: 'Payment Options', path: '/',disableActive: true },
+  { name: 'Returns', path: '/',disableActive: true },
+  { name: 'Privacy Policies', path: '/',disableActive: true }
 ];

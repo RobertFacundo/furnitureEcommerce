@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 type LinkItem = {
     name: string;
     path: string;
+    disableActive?: boolean;
 };
 
 type Props = {
@@ -19,7 +20,7 @@ const NavList = ({ links, className = '', itemClassName = '' }: Props) => {
                     <NavLink
                         to={link.path}
                         className={({ isActive }) =>
-                            `hover-link ${isActive ? 'active-link' : ''}`
+                            `hover-link ${isActive && !link.disableActive ? 'active-link' : ''}`
                         }
                     >
                         {link.name}
