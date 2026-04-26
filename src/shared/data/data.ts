@@ -47,10 +47,7 @@ import bedroomSlidingWardrobe2 from '../../assets/images/products/bedroom/bedroo
 import bedroomSlidingWardrobe3 from '../../assets/images/products/bedroom/bedroom3III.jpg'
 import bedroomSlidingWardrobe4 from '../../assets/images/products/bedroom/bedroom3IV.jpg'
 
-
-
-
-export type CategoryType = 'dining' | 'living' | 'bedroom';
+export type CategoryType = 'Dining' | 'Living' | 'Bedroom';
 
 export type Category = {
     name: CategoryType;
@@ -93,9 +90,9 @@ export type Product = {
 }
 
 export const categories: Category[] = [
-    { name: 'dining', image: diningImg },
-    { name: 'living', image: livingImg },
-    { name: 'bedroom', image: bedroomImg }
+    { name: 'Dining', image: diningImg },
+    { name: 'Living', image: livingImg },
+    { name: 'Bedroom', image: bedroomImg }
 ];
 
 export const products: Product[] = [
@@ -103,7 +100,7 @@ export const products: Product[] = [
         id: 'dining-1',
         name: 'Modern Dining Table',
         price: 320,
-        category: 'dining',
+        category: 'Dining',
         images: [
             dining1,
             dining2,
@@ -128,7 +125,7 @@ export const products: Product[] = [
         id: 'dining-2',
         name: 'Classic Dining Chair',
         price: 120,
-        category: 'dining',
+        category: 'Dining',
         images: [
             diningChair1,
             diningChair2,
@@ -152,7 +149,7 @@ export const products: Product[] = [
         id: 'dining-3',
         name: 'Glass Dining Table',
         price: 450,
-        category: 'dining',
+        category: 'Dining',
         images: [
             diningGlassTable1,
             diningGlassTable2,
@@ -177,7 +174,7 @@ export const products: Product[] = [
         id: 'living-1',
         name: 'Comfortable Fabric Sofa',
         price: 550,
-        category: 'living',
+        category: 'Living',
         images: [
             living1,
             living2,
@@ -201,7 +198,7 @@ export const products: Product[] = [
         id: 'living-2',
         name: 'Wooden Coffee Table',
         price: 180,
-        category: 'living',
+        category: 'Living',
         images: [
             livingCoffeeTable1,
             livingCoffeeTable2,
@@ -225,7 +222,7 @@ export const products: Product[] = [
         id: 'living-3',
         name: 'Modern TV Stand',
         price: 260,
-        category: 'living',
+        category: 'Living',
         images: [
             livingTVStand1,
             livingTVStand2,
@@ -249,7 +246,7 @@ export const products: Product[] = [
         id: 'bedroom-1',
         name: 'Queen Size Bed Frame',
         price: 680,
-        category: 'bedroom',
+        category: 'Bedroom',
         images: [
             bedroom1,
             bedroom2,
@@ -273,7 +270,7 @@ export const products: Product[] = [
         id: 'bedroom-2',
         name: 'Bedside Table',
         price: 140,
-        category: 'bedroom',
+        category: 'Bedroom',
         images: [
             bedroomSideTable1,
             bedroomSideTable2,
@@ -297,7 +294,7 @@ export const products: Product[] = [
         id: 'bedroom-3',
         name: 'Sliding Door Wardrobe',
         price: 920,
-        category: 'bedroom',
+        category: 'Bedroom',
         images: [
             bedroomSlidingWardrobe1,
             bedroomSlidingWardrobe2,

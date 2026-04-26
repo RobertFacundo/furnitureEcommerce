@@ -1,0 +1,45 @@
+import type { Product } from "../data/data";
+import { CiShare2 } from "react-icons/ci";
+import { GoArrowSwitch } from "react-icons/go";
+import { CiHeart } from "react-icons/ci";
+
+type Props = {
+    product: Product;
+};
+
+const ProductOverlay = ({ product }: Props) => {
+    return (
+        <div className="
+        absolute inset-0
+        flex flex-col items-center justify-center gap-4
+        bg-black/40 backdrop-blur-[2px]
+        opacity-0 group-hover:opacity-100
+        transition-all duration-300"
+        >
+
+            <button
+                onClick={() => console.log(product)}
+                className="
+                w-[202px] h-[48px]
+                flex items-center justify-center
+                bg-white text-[#b88e2f]
+                text-[16px] font-semibold
+                cursor-pointer
+                hover:bg-[#f5f5f5] hover:scale-[1.03]
+                transition-all duration-300
+                "
+            >
+                Add to cart
+            </button>
+
+            <div className="flex gap-4 text-white text-[16px]">
+                <button className="hover:underline flex flex-row gap-1 items-center cursor-pointer"> <CiShare2 size={16} /> Share</button>
+                <button className="hover:underline flex flex-row gap-1 items-center cursor-pointer"> <GoArrowSwitch size={16} />Compare</button>
+                <button className="hover:underline flex flex-row gap-1 items-center cursor-pointer"> <CiHeart size={16} />Like</button>
+            </div>
+
+        </div>
+    );
+};
+
+export default ProductOverlay;
