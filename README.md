@@ -1,73 +1,88 @@
-# React + TypeScript + Vite
+# 🏠 Furniro – Figma to Code eCommerce 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **eCommerce Interior Design Landing Page** built from a Figma UI kit, developed as a **Figma-to-Code implementation project** using React, TypeScript, TailwindCSS, and Framer Motion.
 
-Currently, two official plugins are available:
+🔗 Figma Design:  
+https://www.figma.com/design/lnsafTJW2pif2t3223uN0q/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-%7C-Interior-Landing-Page--Community-?node-id=117-960&t=YHmPwzcJLNpDOew1-0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚧 Project Status
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is currently **Work in Progress (WIP)**.
 
-## Expanding the ESLint configuration
+Instead of building everything at once, the development is being done in a **ticket-based / feature-based workflow**, replicating a real-world development process:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🧩 UI section by section
+- 🎯 Component-driven implementation
+- ⚡ Animations progressively integrated with Framer Motion
+- 🧠 Focus on structure, reusability, and scalability
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ⚛️ React + TypeScript
+- 🎨 Tailwind CSS
+- 🎬 Framer Motion
+- 📦 React Router
+- 🧱 Component-based architecture
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Development Approach
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is being built following a **real-world UI implementation workflow**:
+
+### 📌 Ticket-based structure:
+- Hero Section
+- Category Browse Grid
+- Product Showcase
+- Inspiration Slider (advanced carousel logic)
+- Share Section (marquee animation concept)
+
+Each feature is treated as an **isolated UI module**, focusing on:
+
+- Component abstraction
+- Reusable logic
+- Animation consistency
+- UI fidelity to Figma design
+
+---
+
+## ✨ Features Implemented
+
+- 🎯 Pixel-accurate UI based on Figma design
+- 🧩 Modular React architecture
+- 🎠 Custom inspiration carousel with auto-rotation
+- 🖼️ Product grid with hover overlay interactions
+- 🎬 Framer Motion animations across sections
+- 🔄 Reusable animation system
+- 📱 Responsive layout (in progress)
+
+---
+
+## 🚀 Goals of the Project
+
+- Master **Figma to Code workflow**
+- Build **production-level UI architecture**
+- Practice **animation systems with Framer Motion**
+- Improve **component abstraction skills**
+- Simulate **real frontend development process**
+
+---
+
+## 📌 Notes
+
+This project is not finished yet and will continue evolving as new features and improvements are added.
+
+---
+
+## 📬 Contact
+
+Feel free to reach out if you want to collaborate, have any questions, or just connect.
+
+- 📧 Email: robertf.coder@gmail.com  
+- 💼 LinkedIn: [https://www.linkedin.com/in/robertfacundodev/](https://www.linkedin.com/in/robertfacundodev/)  
+- 🌐 Portfolio: [https://facundorobert.vercel.app/](https://facundorobert.vercel.app/)  
+- 💻 GitHub: [https://github.com/RobertFacundo](https://github.com/RobertFacundo)

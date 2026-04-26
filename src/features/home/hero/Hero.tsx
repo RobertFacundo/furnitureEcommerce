@@ -1,10 +1,19 @@
+import { motion } from 'framer-motion'
+import { fadeUp } from '../../../shared/animations/fadeUp';
 
 const Hero = () => {
     return (
-        <section className="relative hero-bg flex items-center justify-end w-full h-[80vh]">
-            <div className='absolute inset-0 bg-black/30'></div>
+        <motion.section
+            initial='hidden'
+            animate='show'
+            variants={fadeUp}
+            className="relative hero-bg flex items-center justify-end w-full h-[80vh]"
+        >
+            <motion.div variants={fadeUp} className='absolute inset-0 bg-black/30'></motion.div>
 
-            <div className="relative flex flex-col max-w-[643px] min-h-[443px] mr-10 p-10 rounded-[10px] bg-[#FFF3E3] font-poppins">
+            <motion.div
+                variants={fadeUp}
+                className="relative flex flex-col max-w-[643px] min-h-[443px] mr-10 p-10 rounded-[10px] bg-[#FFF3E3] font-poppins">
                 <h3 className='text-[16px] font-medium mt-5 tracking-[3px]'>New Arrival</h3>
                 <h1 className="font-bold text-[52px] text-[#b88e2f] flex flex-col leading-tight" >
                     Discover our <br /> New Collection
@@ -21,8 +30,8 @@ const Hero = () => {
                 >
                     BUY NOW
                 </button>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 };
 

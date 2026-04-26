@@ -1,5 +1,7 @@
+import { productCard } from "../animations/productCard";
 import type { Product } from "../data/data";
 import ProductOverlay from "./ProductOverlay";
+import {motion} from 'framer-motion'
 
 type Props = {
     product: Product;
@@ -7,7 +9,9 @@ type Props = {
 
 const ProductCard = ({ product }: Props) => {
     return (
-        <div className="relative flex flex-col w-[285px] h-[446px] group cursor-pointer">
+        <motion.div 
+        variants={productCard}
+        className="relative flex flex-col w-[285px] h-[446px] group cursor-pointer">
             <div className="h-[301px] overflow-hidden">
                 <img
                     src={product.images[0]}
@@ -31,7 +35,7 @@ const ProductCard = ({ product }: Props) => {
             </div>
 
             <ProductOverlay product={product}/>
-        </div>
+        </motion.div>
     );
 };
 

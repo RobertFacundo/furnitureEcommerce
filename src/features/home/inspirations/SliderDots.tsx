@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { dotActive } from '../../../shared/animations/inspiration';
+
 type Props = {
   total: number;
   activeIndex: number;
@@ -19,7 +22,8 @@ const SliderDots = ({ total, activeIndex, onSelect }: Props) => {
             ${index === activeIndex ? 'border border-[#b88e2f]' : ''}
           `}
         >
-          <div
+          <motion.div
+            animate={index === activeIndex ? dotActive : {}}
             className={`
               w-3 h-3 rounded-full transition
               ${index === activeIndex ? 'bg-[#b88e2f]' : 'bg-gray-300'}

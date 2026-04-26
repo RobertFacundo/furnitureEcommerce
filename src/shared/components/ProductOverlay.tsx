@@ -13,7 +13,7 @@ const ProductOverlay = ({ product }: Props) => {
         absolute inset-0
         flex flex-col items-center justify-center gap-4
         bg-black/40 backdrop-blur-[2px]
-        opacity-0 group-hover:opacity-100
+        opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100
         transition-all duration-300"
         >
 

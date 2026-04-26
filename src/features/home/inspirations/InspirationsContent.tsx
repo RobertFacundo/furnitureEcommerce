@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
+import { fadeLeft } from "../../../shared/animations/inspiration";
 
 type Props = {
   title: string;
@@ -7,7 +9,10 @@ type Props = {
 
 const InspirationsContent = ({ title, description }: Props) => {
   return (
-    <div className="flex flex-col justify-center w-[922px] ml-15 font-poppins pr-10">
+    <motion.div
+      variants={fadeLeft}
+      className="flex flex-col justify-center w-[922px] ml-15 font-poppins pr-10"
+    >
       <h1 className="font-bold text-[40px]">{title}</h1>
       <p className="font-medium text-[#636363]">{description}</p>
 
@@ -25,7 +30,7 @@ const InspirationsContent = ({ title, description }: Props) => {
       >
         Explore more
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

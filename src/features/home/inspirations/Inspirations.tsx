@@ -1,8 +1,9 @@
 import { inspirations } from "../../../shared/data/inspiration";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import InspirationsContent from "./InspirationsContent";
 import InspirationsSlider from "./InspirationsSlider";
-
+import { motion } from 'framer-motion'
+import { container } from "../../../shared/animations/inspiration";
 
 const Inspirations = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -10,7 +11,7 @@ const Inspirations = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex(prev => (prev + 1) % inspirations.length);
-        }, 2000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -21,7 +22,14 @@ const Inspirations = () => {
     ];
 
     return (
-        <section className="flex bg-[#FCF8F3]">
+        <motion.section
+            variants={container}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ amount: 0.2 }}
+            className="flex bg-[#FCF8F3]"
+        >
+            
             <InspirationsContent
                 title="50+ Beautiful rooms inspiration"
                 description="Our designer already made a lot of beautiful prototype of rooms that inspire you"
@@ -33,7 +41,7 @@ const Inspirations = () => {
                 visibleInspirations={visibleInspirations}
                 inspirations={inspirations}
             />
-        </section>
+        </motion.section>
     )
 };
 
