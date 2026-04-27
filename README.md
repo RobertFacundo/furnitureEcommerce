@@ -59,6 +59,7 @@ Each feature is treated as an **isolated UI module**, focusing on:
 - 🎬 Framer Motion animations across sections
 - 🔄 Reusable animation system
 - 📱 Responsive layout (in progress)
+- ⌨️ Command Search Bar powered by cmdk (fast, accessible UI command palette style search)
 
 ---
 

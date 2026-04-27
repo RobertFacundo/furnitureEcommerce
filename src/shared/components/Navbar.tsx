@@ -1,6 +1,7 @@
 import { navLinks } from '../data/navigation';
 import logo from '/logo.png';
 import NavList from './NavList';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
     return (
@@ -13,7 +14,7 @@ const Navbar = () => {
                 className="flex-row gap-20 items-center font-poppins text-[16px]"
             />
             <div>
-                Future search component
+                <SearchBar />
             </div>
         </nav>
     )
