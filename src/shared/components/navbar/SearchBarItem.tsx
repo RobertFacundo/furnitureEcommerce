@@ -1,4 +1,4 @@
-import type { Product } from "../data/data";
+import type { Product } from "../../data/data";
 
 type SearchBarItemProps = {
     product: Product

@@ -9,7 +9,7 @@ type Props = {
 
 const SliderDots = ({ total, activeIndex, onSelect }: Props) => {
   return (
-    <div className="flex gap-2 mt-4 justify-center">
+    <div className="flex gap-2 mt-4 md:justify-center justify-start">
       {Array.from({ length: total }).map((_, index) => (
         <div
           key={index}

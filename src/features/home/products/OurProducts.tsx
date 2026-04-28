@@ -21,7 +21,7 @@ const OurProducts = () => {
                 className="font-bold text-[40px] text-center py-5">
                 Our Products
             </motion.h1>
-            <motion.div variants={section} className="grid grid-cols-4 gap-12 mx-auto">
+            <motion.div variants={section} className="grid md:grid-cols-4 grid-cols-2 gap-12 mx-auto">
                 {data?.slice(0, 4).map(product => (
                     <ProductCard key={product.id} product={product} />
                 ))}

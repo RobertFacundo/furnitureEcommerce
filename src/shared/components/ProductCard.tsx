@@ -11,8 +11,8 @@ const ProductCard = ({ product }: Props) => {
     return (
         <motion.div 
         variants={productCard}
-        className="relative flex flex-col w-[285px] h-[446px] group cursor-pointer">
-            <div className="h-[301px] overflow-hidden">
+        className="relative flex flex-col md:w-[285px] md:h-[446px] w-[200px] h-[280px] group cursor-pointer">
+            <div className="md:h-[301px] h-[200px] overflow-hidden">
                 <img
                     src={product.images[0]}
                     alt={product.name}
@@ -20,16 +20,16 @@ const ProductCard = ({ product }: Props) => {
                 />
             </div>
 
-            <div className="flex flex-col bg-[#f4f5f7] p-4 gap-3 h-[145px]">
-                <h3 className="font-semibold text-[18px]">
+            <div className="flex flex-col bg-[#f4f5f7] md:p-4 md:gap-3 md:h-[145px] p-1 gap-1 h-[80px]">
+                <h3 className="font-semibold md:text-[18px] text-[11px]">
                     {product.name}
                 </h3>
 
-                <p className="text-[14px] text-gray-500">
+                <p className="md:text-[14px] text-[11px] text-gray-500">
                     {product.shortDescription}
                 </p>
 
-                <p className="font-semibold text-[16px]">
+                <p className="font-semibold md:text-[16px] text-[12px]">
                     ${product.price}
                 </p>
             </div>

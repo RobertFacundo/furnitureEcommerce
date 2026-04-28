@@ -27,7 +27,7 @@ const Inspirations = () => {
             initial='hidden'
             whileInView='show'
             viewport={{ amount: 0.2 }}
-            className="flex bg-[#FCF8F3]"
+            className="flex bg-[#FCF8F3] md:flex-row flex-col"
         >
             
             <InspirationsContent

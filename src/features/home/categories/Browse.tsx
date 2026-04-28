@@ -25,7 +25,7 @@ const Browse = () => {
             </motion.div>
             <motion.div 
             variants={container}
-            className="grid grid-cols-3 gap-5 max-w-[1183px] mx-auto">
+            className="grid md:grid-cols-3 grid-cols-1 md:gap-5 gap-16 max-w-[1183px] mx-auto">
                 {data?.map(category => (
                     <motion.div key={category.name} variants={card}>
                         <Link

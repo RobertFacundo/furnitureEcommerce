@@ -11,7 +11,7 @@ type Props = {
 const ActiveInspiration = ({ item, index, onNext }: Props) => {
   return (
     <div
-      className="relative w-[404px] h-[582px] overflow-hidden">
+      className="relative md:w-[404px] w-[600px] h-[582px] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={item.id}

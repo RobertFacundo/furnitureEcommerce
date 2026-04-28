@@ -1,10 +1,11 @@
-import { useProducts } from "../hooks/useProducts";
+import { useProducts } from "../../hooks/useProducts";
 import { Command, CommandInput, CommandList, CommandItem, CommandEmpty } from "cmdk";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef} from "react";
 import SearchBarItem from "./SearchBarItem";
 import { AnimatePresence, motion } from 'framer-motion';
-import {searchItem } from "../animations/searchNavBar";
+import { searchItem } from "../../animations/searchNavBar";
 import { IoClose } from "react-icons/io5";
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 const SearchBar = () => {
     const [query, setQuery] = useState("");
@@ -16,23 +17,12 @@ const SearchBar = () => {
         product.name.toLowerCase().includes(query.toLowerCase())
     );
 
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-                setQuery("");
-            }
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-
-        return () =>
-            document.removeEventListener('mousedown', handleClickOutside);
-    }, [])
+    useClickOutside(wrapperRef, () => setQuery(""));
 
 
     return (
         <div ref={wrapperRef}>
-            <Command className="relative w-[300px] border rounded-lg p-2">
+            <Command className="relative md:w-[300px] w-[200px] border rounded-lg p-2">
                 <div className="flex items-center gap-2">
                     <CommandInput
                         value={query}
@@ -64,7 +54,7 @@ const SearchBar = () => {
                                     value={product.name}
                                     onSelect={() => setQuery(product.name)}
                                     asChild
-                                    
+
                                 >
                                     <motion.div
                                         variants={searchItem}

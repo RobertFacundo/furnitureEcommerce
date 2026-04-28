@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import {motion}from 'framer-motion'
+import { item } from '../animations/burguerMenu';
 
 type LinkItem = {
     name: string;
@@ -14,9 +16,9 @@ type Props = {
 
 const NavList = ({ links, className = '', itemClassName = '' }: Props) => {
     return (
-        <ul className={`flex ${className} gap-2 font-medium`}>
+        <ul className={`${className} gap-2 font-medium`}>
             {links.map(link => (
-                <li key={link.path} className={itemClassName}>
+                <motion.li key={link.path} variants={item} className={`${itemClassName}`}>
                     <NavLink
                         to={link.path}
                         className={({ isActive }) =>
@@ -25,7 +27,7 @@ const NavList = ({ links, className = '', itemClassName = '' }: Props) => {
                     >
                         {link.name}
                     </NavLink>
-                </li>
+                </motion.li>
             ))}
         </ul>
     );

@@ -11,9 +11,9 @@ const InspirationsContent = ({ title, description }: Props) => {
   return (
     <motion.div
       variants={fadeLeft}
-      className="flex flex-col justify-center w-[922px] ml-15 font-poppins pr-10"
+      className="flex flex-col justify-center md:w-[922px] w-[400px] ml-15 font-poppins pr-10"
     >
-      <h1 className="font-bold text-[40px]">{title}</h1>
+      <h1 className="font-bold md:text-[40px] text-[20px] mt-5">{title}</h1>
       <p className="font-medium text-[#636363]">{description}</p>
 
       <Link
