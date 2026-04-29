@@ -39,3 +39,10 @@ html{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.header-bg{
+  background-image: url('/src/assets/images/inspirations/inspiration3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

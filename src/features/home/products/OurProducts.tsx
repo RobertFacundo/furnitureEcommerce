@@ -23,7 +23,7 @@ const OurProducts = () => {
             </motion.h1>
             <motion.div variants={section} className="grid md:grid-cols-4 grid-cols-2 gap-12 mx-auto">
                 {data?.slice(0, 4).map(product => (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product} viewMode="grid" />
                 ))}
             </motion.div>
             <motion.div variants={button}>

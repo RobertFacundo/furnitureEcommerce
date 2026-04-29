@@ -60,8 +60,8 @@ Each feature is treated as an **isolated UI module**, focusing on:
 - 🔄 Reusable animation system
 - 📱 Responsive layout (in progress)
 - ⌨️ Command Search Bar powered by cmdk (fast, accessible UI command palette style search)
-- Responsive layout for mobile, tablet, and desktop
-- Animated burger navigation menu
+- 📱 Responsive layout for mobile, tablet, and desktop
+- 🍔 Animated burger navigation menu
 
 ---
 
