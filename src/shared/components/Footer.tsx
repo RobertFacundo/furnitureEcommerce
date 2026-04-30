@@ -4,7 +4,7 @@ import { helpLinks } from "../data/navigation";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col border-t p-10 border-[#9F9F9F]">
+        <footer className="flex flex-col border-t p-10 border-[#9F9F9F]/30">
             <div className="grid grid-cols-4 ">
                 <div className="flex flex-col gap-9 mr-5 md:mr-0">
                     <h3 className="font-poppins font-bold md:text-[24px] text-[16px]">Funiro.</h3>

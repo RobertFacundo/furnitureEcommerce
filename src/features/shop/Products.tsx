@@ -1,16 +1,14 @@
 import ProductCard from "../../shared/components/ProductCard";
-import { useProducts } from "../../shared/hooks/useProducts";
+import type { Product } from "../../shared/data/data";
+// import { useProducts } from "../../shared/hooks/useProducts";
 import { motion } from 'framer-motion'
 
 type Props = {
     viewMode: "grid" | "row";
+    products: Product[] | undefined;
 }
 
-const Products = ({ viewMode }: Props) => {
-    const { data, error, isLoading } = useProducts();
-
-    if (error) return <p>Products not found</p>
-    if (isLoading) return <p>Loading products...</p>
+const Products = ({ viewMode, products }: Props) => {
 
     return (
         <motion.div
@@ -39,7 +37,7 @@ const Products = ({ viewMode }: Props) => {
             }}
             layout
         >
-            {data?.map((product) => (
+            {products?.map((product) => (
                 <motion.div
                     key={product.id}
                     variants={{
