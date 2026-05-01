@@ -4,6 +4,7 @@ import Home from './views/Home';
 import Shop from './views/Shop';
 import Contact from './views/Contact';
 import Cart from './views/Cart';
+import ProductDetail from './views/ProductDetail';
 import MainLayout from './shared/components/MainLayout';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
+          <Route path='/shop/:slug' element={<ProductDetail />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/cart' element={<Cart />} />
         </Route>

@@ -2,6 +2,8 @@ import type { Product } from "../data/data";
 import { CiShare2 } from "react-icons/ci";
 import { GoArrowSwitch } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { slugify } from "../utils/slugify";
 
 type Props = {
     product: Product;
@@ -17,8 +19,8 @@ const ProductOverlay = ({ product }: Props) => {
         transition-all duration-300"
         >
 
-            <button
-                onClick={() => console.log(product)}
+            <Link
+                to={`/shop/${slugify(product.name)}`}
                 className="
                 md:w-[202px] md:h-[48px] p-1
                 flex items-center justify-center
@@ -29,8 +31,8 @@ const ProductOverlay = ({ product }: Props) => {
                 transition-all duration-300
                 "
             >
-                Add to cart
-            </button>
+                View more
+            </Link>
 
             <div className="flex gap-4 text-white md:text-[16px] text-[10px]">
                 <button className="hover:underline flex flex-row gap-1 items-center cursor-pointer"> <CiShare2 size={16} /> Share</button>

@@ -13,7 +13,7 @@ const Products = ({ viewMode, products }: Props) => {
     return (
         <motion.div
             className={viewMode === 'grid'
-                ? "grid md:grid-cols-4 gap-10 mb-6 p-16 mx-auto"
+                ? "grid md:grid-cols-4 grid-cols-2 md:gap-10 gap-16 mb-6 p-16 mx-auto pl-8"
                 : "flex flex-col gap-4 mt-2"
             }
             initial="hidden"

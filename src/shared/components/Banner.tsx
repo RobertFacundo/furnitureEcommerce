@@ -19,7 +19,7 @@ const item = {
 const Banner = () => {
     return (
         <motion.div
-            className="flex flex-row gap-10 items-center justify-around h-[270px] bg-[#FAF3EA]"
+            className="flex md:flex-row flex-col gap-10 md:items-center items-start md:justify-around p-3  md:h-[270px] h-[460px] bg-[#FAF3EA]"
             variants={container}
             initial="hidden"
             whileInView="show"
