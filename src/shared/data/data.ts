@@ -72,11 +72,11 @@ export type Product = {
     description: string;
 
     colors?: string[];
-    sizes?: string[];
+    sizes: string[];
 
-    tags?: string[];
+    tags: string[];
 
-    rating?: number;
+    rating: number;
     reviews?: Review[];
 
     additionalInfo?: {

@@ -6,7 +6,7 @@ type Props = {
 
 const Header = ({ title }: Props) => {
     return (
-        <div className="relative w-full h-[318px] header-bg flex flex-col items-center justify-center font-poppins">
+        <div className="relative w-full h-[318px] header-bg flex flex-col items-center justify-center font-poppins mb-5">
             <motion.div
                 className="absolute inset-0 bg-white/90"
                 initial={{ opacity: 0 }}
