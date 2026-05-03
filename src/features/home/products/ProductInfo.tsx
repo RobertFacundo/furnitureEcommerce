@@ -23,7 +23,7 @@ const ProductInfo = ({ product }: Props) => {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: "easeOut" as const }}
-            className="flex flex-row gap-15">
+            className="flex md:flex-row flex-col gap-15 mr-3">
             <motion.div
                 initial={{ opacity: 0, x: -24 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -64,7 +64,7 @@ const ProductInfo = ({ product }: Props) => {
                 initial={{ opacity: 0, x: 24 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.25, duration: 0.55 }}
-                className="flex flex-col gap-2 font-poppins"
+                className="flex flex-col gap-2 font-poppins ml-5"
             >
                 <h1 className="text-[42px]">{product.name}</h1>
                 <Rating rating={product.rating} />

@@ -24,7 +24,7 @@ const RelatedProducts = ({ tags, currentId }: Props) => {
                 Related Products
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl md:mx-auto ml-5 ">
                 {related?.map((product) => (
                     <ProductCard
                         key={product.id}
