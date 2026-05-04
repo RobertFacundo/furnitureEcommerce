@@ -11,7 +11,7 @@ https://www.figma.com/design/lnsafTJW2pif2t3223uN0q/eCommerce-Website-%7C-Web-Pa
 
 This project evolved from a UI implementation into a fully interactive frontend experience, including state management and real product flow simulation.
 
-Instead of building everything at once, the development is being done in a **ticket-based / feature-based workflow**, replicating a real-world development process:
+Instead of building everything at once, the project was developed using a **ticket-based / feature-based workflow**, replicating a real-world development process:
 
 - 🧩 UI section by section
 - 🎯 Component-driven implementation
