@@ -1,31 +1,23 @@
 import CartItems from "./CartItems";
 import CartSummary from "./CartSummary";
-import type { CartType } from "../../shared/types/cart";
+import { useAppSelector } from "../../shared/redux/hooks";
 
 const CartComponent = () => {
-    const cart: CartType = {
-        items: [
-            {
-                id: 1,
-                name: "Nike Air Max",
-                price: 120,
-                quantity: 2,
-                image: "/img/shoe1.png",
-            },
-            {
-                id: 2,
-                name: "Adidas Forum",
-                price: 90,
-                quantity: 1,
-                image: "/img/shoe2.png",
-            },
-        ],
-    };
+    const { items } = useAppSelector((state) => state.cart)
 
-    const subtotal = cart.items.reduce(
+    const subtotal = items.reduce(
         (acc, item) => acc + item.price * item.quantity,
         0
     );
+
+    if (items.length === 0) {
+        return (
+            <section className="text-center py-20">
+                <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
+                <p className="text-gray-500">Looks like you haven't added anything yet</p>
+            </section>
+        );
+    }
 
     return (
         <section className="max-w-7xl mx-auto px-4 py-10">
@@ -33,7 +25,7 @@ const CartComponent = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
-                    <CartItems items={cart.items} />
+                    <CartItems items={items} />
                 </div>
 
                 <CartSummary subtotal={subtotal} total={subtotal} />

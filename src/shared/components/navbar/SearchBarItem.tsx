@@ -1,4 +1,6 @@
 import type { Product } from "../../data/data";
+import { Link } from "react-router-dom";
+import { slugify } from "../../utils/slugify";
 
 type SearchBarItemProps = {
     product: Product
@@ -6,7 +8,7 @@ type SearchBarItemProps = {
 
 const SearchBarItem = ({ product }: SearchBarItemProps) => {
     return (
-        <div className="flex items-center gap-4 w-full">
+        <Link  to={`/shop/${slugify(product.name)}`} className="flex items-center gap-4 w-full">
             <img
                 src={product.images[0]}
                 alt={product.name}
@@ -16,7 +18,7 @@ const SearchBarItem = ({ product }: SearchBarItemProps) => {
             <h1 className="font-poppins text-sm truncate">
                 {product.name}
             </h1>
-        </div>
+        </Link>
     )
 };
 

@@ -4,19 +4,38 @@ import Rating from "./Rating";
 import SizeSelector from "./SizeSelector";
 import ColorSelector from "./ColorSelector";
 import { motion, AnimatePresence } from 'framer-motion'
-
+import { useCart } from "../../../shared/hooks/useCart";
 type Props = {
     product: Product;
 }
 
 const ProductInfo = ({ product }: Props) => {
+    const { addItem } = useCart();
     const [selectedPicture, setSelectedPicture] = useState(0)
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
+    const [added, setAdded] = useState(false);
 
     const canAddToCart =
         (!product.sizes?.length || selectedSize) &&
         (!product.colors?.length || selectedColor);
+
+    const handleAddToCart = () => {
+        if (!canAddToCart) return;
+
+        addItem({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+            image: product.images[0],
+            size: selectedSize ?? undefined,
+            color: selectedColor ?? undefined,
+        });
+        setAdded(true);
+
+        setTimeout(() => setAdded(false), 1500);
+    };
 
     return (
         <motion.div
@@ -75,6 +94,7 @@ const ProductInfo = ({ product }: Props) => {
                 <ColorSelector colors={product.colors} onSelect={setSelectedColor} selectedColor={selectedColor} />
                 <div className="pt-4">
                     <motion.button
+                        onClick={handleAddToCart}
                         whileHover={
                             canAddToCart ? { scale: 1.02 } : {}
                         }
@@ -88,7 +108,7 @@ const ProductInfo = ({ product }: Props) => {
                                 : "bg-zinc-300 text-zinc-500 cursor-not-allowed"
                             }`}
                     >
-                        Add to Cart
+                        {added ? "Added!" : "Add to Cart"}
                     </motion.button>
                 </div>
             </motion.div>

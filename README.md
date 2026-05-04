@@ -7,9 +7,9 @@ https://www.figma.com/design/lnsafTJW2pif2t3223uN0q/eCommerce-Website-%7C-Web-Pa
 
 ---
 
-## 🚧 Project Status
+## ✅ Project Status
 
-This project is currently **Work in Progress (WIP)**.
+This project evolved from a UI implementation into a fully interactive frontend experience, including state management and real product flow simulation.
 
 Instead of building everything at once, the development is being done in a **ticket-based / feature-based workflow**, replicating a real-world development process:
 
@@ -64,6 +64,16 @@ Each feature is treated as an **isolated UI module**, focusing on:
 - 🍔 Animated burger navigation menu
 
 ---
+## 🛒 eCommerce Functionality
+
+🛍️ Dynamic product rendering
+🧠 Global cart state with Redux Toolkit
+➕ Add to cart with product variants (size & color)
+🔁 Quantity management (increase / decrease)
+❌ Remove items from cart
+💰 Real-time subtotal calculation
+🧩 Component-based cart architecture
+⚡ Reactive UI updates based on global state
 
 ## 🚀 Goals of the Project
 
@@ -74,11 +84,13 @@ Each feature is treated as an **isolated UI module**, focusing on:
 - Simulate **real frontend development process**
 
 ---
+## 🎯 Key Learnings
 
-## 📌 Notes
-
-This project is not finished yet and will continue evolving as new features and improvements are added.
-
+- Implemented Redux Toolkit in a real use case (cart system)
+- Managed complex UI state with product variants
+- Built a scalable component architecture
+- Practiced real-world frontend patterns (separation of concerns)
+- Improved UX through interaction and animation design
 ---
 
 ## 📬 Contact
